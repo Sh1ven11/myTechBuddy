@@ -19,7 +19,7 @@ export default function App() {
       {/* HERO */}
       <section className="hero">
         <h1>
-          Technology Made Difficult <span className="accent">for Seniors</span>
+          Technology Made Simple <span className="accent">for Seniors</span>
         </h1>
         <p className="lead">
           We help senior citizens stay connected with family, use smartphones and
