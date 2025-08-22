@@ -1,0 +1,66 @@
+/* ---------- brand + theme ---------- */
+:root{
+  --blue:#3A6DFF;         /* logo blue */
+  --green:#4BE15C;        /* logo green */
+  --bg:#F7F8FB;           /* page background */
+  --text:#1A1A1A;
+  --muted:#5A5A5A;
+  --card:#FFFFFF;
+  --radius:18px;
+  --shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+     color:var(--text);background:var(--bg);}
+
+a{text-decoration:none;color:inherit}
+
+/* ---------- layout ---------- */
+.site{display:flex;flex-direction:column;min-height:100%}
+
+/* navbar */
+.nav{position:sticky;top:0;z-index:10;background:#fff;
+     display:flex;align-items:center;justify-content:space-between;
+     padding:14px 24px;border-bottom:1px solid #eee;box-shadow:0 2px 8px rgba(0,0,0,.03)}
+.logo{height:36px;display:block}
+.nav-links{display:flex;gap:18px;align-items:center}
+.nav-links a{font-weight:600;color:#2b2b2b;opacity:.9}
+.nav-links a:hover{opacity:1}
+
+/* hero */
+.hero{max-width:1100px;margin:56px auto 24px;padding:0 20px;text-align:center}
+.hero h1{font-size: clamp(32px, 5vw, 54px);line-height:1.1;margin:0 0 14px}
+.hero .accent{color:var(--green)}
+.lead{color:var(--muted);font-size:clamp(16px,2.2vw,20px);max-width:780px;margin:0 auto}
+.cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* buttons */
+.btn{display:inline-block;padding:12px 18px;border-radius:14px;font-weight:700;letter-spacing:.2px}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-success{background:var(--green);color:#0b2a10}
+.btn-outline{border:2px solid var(--blue);color:var(--blue);padding:10px 16px;border-radius:12px}
+.btn:hover{filter:brightness(.96)}
+
+/* sections */
+.section{max-width:1100px;margin:24px auto;padding:10px 20px 36px}
+.section h2{font-size:clamp(22px,3vw,32px);margin:6px 0 20px}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(1,minmax(0,1fr));gap:16px}
+@media (min-width:720px){ .cards{grid-template-columns:repeat(2,1fr)} }
+.card{background:var(--card);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);border:1px solid #eef1f7}
+.card h3{margin:0 0 8px;font-size:20px;color:#1d2a5b}
+.card p{margin:0;color:var(--muted)}
+
+/* about */
+.muted{background:#fff;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.about{max-width:900px;margin:0 auto;padding:24px 20px}
+.about ul{margin:10px 0 0 18px;color:var(--muted);line-height:1.7}
+
+/* footer */
+.footer{margin-top:auto;background:#0f141a;color:#e6e6e6;padding:26px 16px}
+.contact{max-width:900px;margin:0 auto;text-align:center}
+.contact-line{margin:4px 0;font-size:18px}
+.small{opacity:.75;font-size:13px;margin-top:8px}
